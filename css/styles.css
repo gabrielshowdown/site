@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet>');
+
+/* Gerais */
+body {
+  font-family: 'Roboto', sans-serif; /*Fonte da página*/
+}
+
+.row {
+  margin: 0; /*Tira a margem da linha do header*/
+}
+
+.container {
+  padding: 60px 0; /*Distancia entre os conteiner em cima*/
+}
+
+p, li {
+  color: #444; /*Cor dos parágrafos e listas*/
+  font-size: 14px;
+}
+
+/* Barra de navegação */
+header, .navbar {
+  background-color: #000000;
+}
+
+#nav-container {
+  padding-top: 0px; /*Tira a da margem do header para o conteúdo abaixo*/
+  padding-bottom: 0; /*Adiciona margem abaixo no conteúdo do header*/
+}
+
+#logo {
+  width: 40px; /*Tamanho do ícone do header*/
+}
+
+.navbar-brand {
+  padding: 0; /*Preencimento no header*/
+  color: #FFF; /*Cor dos textos no header*/
+  margin-left: 15px; /*Magem a esquerda os itens do header*/
+  font-size: 45px; /*Tamnho da fonte do nome (BIMOM)*/
+  font-family: 'Roboto', sans-serif; /*Fonte*/
+}
+
+#navbar-links a{
+  color: #FFF; /*Cor dos itens do header*/
+  font-size: 20px; /*Fonte dos itens do header*/
+}
+
+.alinhamento-centro{
+  margin-left: auto; /*Deixa centralizado os intens entre o logo e o cadastro*/
+  margin-right: auto; /*Deixa centralizado os intens entre o logo e o cadastro*/
+}
+
+.alinhamento-direita{
+  margin-right: 0; /*Deixa sem margem a direita*/
+}
+
+#navbar-links a:hover{
+  transition: color 1s; /*Transição da cor original para a selecionada*/
+  opacity: 0.9; /*Nível da cor, quanto mais próximo ao 0, mais forte*/
+  color:rgb(190, 180, 245); /*Cor ao passar por cima*/
+  font-weight: bold; /*Deixa em negrito*/
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 20px; /*Especamento entre os itens do header*/
+}
+
+/* Slider */
+.container-fluid {
+  padding: 0; /*Deixar 100% da tela*/
+}
+
+#mainSlider .carousel-inner, #mainSlider .carousel-item {
+  height: 90vh; /*Vai cobrir 90% da tela*/
+}
+
+#mainSlider .carousel-caption {
+  top: 30%; /*Mover texto para cima*/
+}
+
+#mainSlider .carousel-caption h2 {
+  font-size: 50px; /*Fonte do título do slide*/
+  margin-bottom: 30px; /*Distancia até o textoa abaixo*/
+}
+
+#mainSlider .carousel-caption p {
+  font-size: 22px; /*Cor do parágrafo embaixo do título*/
+  font-weight: 300; /*Intensidade da fonte*/
+  margin-bottom: 100px; /*Distância do parágrafo até o botão*/
+  color: #FFF; /*Cor do texto*/
+}
+#mainSlider .slide2 .carousel-caption p{ /*Aumenta a distância do botão, já que o parágrafo é só uma linha*/
+  margin-bottom: 150px; /*Distância do parágrafo até o botão*/
+}
+
+.main-btn {
+  background-color: #65DAF9; /*Cor do botão*/
+  color: #FFF; /*Cor do texto do botão*/
+  text-transform: uppercase; /*Texto do botão em maiúsculo*/
+  padding: 10px 20px; /*Altura e comprimento do botão*/
+  border-radius: 30px; /*Curvatura da bola*/
+  border: 3px solid transparent; /*Borda fixa no botão*/
+  transition: .5s; /*Tempo de transição*/
+}
+
+.main-btn:hover {
+  text-decoration: none; /*Não põe sublinhado embaixo*/
+  color: #FFF; /*Cor da fonte*/
+  background-color: transparent; /*Deixa transparente*/
+  border-color: #3EC1D5; /*Deixa a borda com a cor*/
+}
+
+.carousel-indicators li { /*Deixa os indicadores redondos*/
+  width: 15px; /*Deixa os indicadores na mesma proporção*/
+  height: 15px; /*Deixa os indicadores na mesma proporção*/
+  border-radius: 50%; /*Regula a bora*/
+}
+.carousel-indicators .active {
+  background-color: #65DAF9; /*Barrina embaixo fica azul quando ta ativo*/
+}
+
+/* Sobre a empresa */
+#about-area {
+  background-color: #F9F9F9; /*Fundo branco na prate de sobre*/
+}
+
+.main-title {
+  color: #444; /*Cor do título*/
+  margin: 0 0 65px 0; /*Margem do título para baixo*/
+  font-size: 40px; /*Tamanho da fonte*/
+  text-align: center; /*Centralização do titulo*/
+}
+
+.main-title::after { 
+  content: ""; /*Coloca a barrinha em baixo do titulo */
+  border-top: 2px solid #333; /*Grossura e cor da barrinha*/
+  width: 15%; /*Largura da barrinha*/
+  position: absolute;
+  top: 60px; /*Distancia de barrinha até p título*/
+  left: 42.5%; /*Deixar ela centralizada*/
+}
+
+.about-title {
+  font-size: 17px; /*Tamanho da fonte*/
+  color: #444; /*Cor do texto*/
+  text-transform: uppercase; /*Texto em maiusculo*/
+  font-weight: bold; /*Texto em negrito*/
+  text-align: center; /*Centralizado*/
+}
+
+#about-list {
+  list-style: none; /*Tira a bolinha da lista não ordenada, "fas fa-check" já cria o ícone*/
+  padding-left: 0; /*Deixa sem espeçamento entre */
+}
+
+#about-list li {
+  line-height: 30px; /*Distância entre cada item da lista*/
+}
+
+#about-list i {
+  color: #65DAF9; /*Cor do ícone da lista*/
+  margin-right: 15px; /*Distancia entre o ícone e o texto*/
+}
+
+/* Serviços */
+.service-box {
+  text-align: center; /*Mantém os ícones e textos centralizados*/
+  margin-bottom: 70px; /*Espaço embaixo entre cada um*/
+}
+
+.service-box i, .service-box h4 {
+  transition: .5s; /*Transição para o hover*/
+}
+
+.service-box i {
+  font-size: 36px; /*Tamanho do ícone*/
+  margin-bottom: 20px; /*Distância entre o ícone e seu título*/
+  color: #444; /*Cor do ícone*/
+}
+
+.service-box h4 {
+  font-size: 24px; /*Tamanho do título do ícone*/
+  margin-bottom: 20px; /*Disncia entre o título e o texto*/
+}
+
+.service-box:hover > i, .service-box:hover > h4 {
+  color: #65DAF9; /*Cor quando fica em cima*/
+}
+
+/* Dados */
+.circle-box div {
+  padding: 0 40px; /* Regula o tamanho do circulo (quanto menor o valor, maior o circulo)*/
+}
+
+.progressbar-text {
+  font-weight: bold; /*Deixa o número em negrito*/
+  font-size: 52px; /*Fonte do número*/
+}
+
+#data-area p {
+  color: #FFF; /*Cor do texto*/
+  text-align: center; /*Alinhamento do texto*/
+  font-size: 26px; /*Fonte do texto*/
+  margin-top: 20px; /*Distância do circulo*/
+}
+
+/* Time */
+.card-body {
+  text-align: center; /*Alinha o texto em baixo da foto*/
+}
+
+/* Slider com texto */
+#apply-area {
+  height: 500px; /*Altura da área, imagem e fundo*/
+}
+
+#apply-area .container-fluid, #apply-area .row {
+  height: 100%; /*Tamanho da imagem*/
+}
+
+#apply-area .apply-box {
+  padding: 70px 50px; /*Dstancia do texto em cima e nas laterais*/
+  text-align: center; /*Centraliza o texto*/
+}
+
+#predio-img {
+  background-image: url('../img/empresa.jpg');
+  background-size: cover; /*Redireciona a imagem para cobrir o conteiner, ajustando o tamanho*/
+  height: 100%; /*Deixa e imagem com 100% do tamanho*/
+}
+
+#fundo-img h4, #fundo-img p {
+  color: #FFF;
+}
+
+#fundo-img h4 {
+  margin-top: 8%;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+#fundo-img p {
+  margin-bottom: 20px;
+}
+
+#apply-btn {
+  display: block;
+  height: auto;
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  background-color: transparent;
+  border-color: #FFF;
+}
+
+#apply-btn:hover {
+  border-color: #65DAF9;
+  background-color: #65DAF9;
+}
+
+/* Portfólio */
+
+.project-box {
+  margin-bottom: 30px;
+}
+
+#filter-btn-box {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+#portfolio-area .filter-btn {
+  color: #444;
+  border: 1px solid #444;
+  background-color: transparent;
+  text-transform: none;
+  margin: 0 15px;
+  min-width: 100px;
+  width: auto;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+}
+
+#portfolio-area .filter-btn.active, #portfolio-area .filter-btn:hover {
+  color: #FFF;
+  border: 1px solid #65DAF9;
+  background-color: #65DAF9;
+}
+
+/* Receber email */
+#news-area {
+  text-align: center;
+  background-color: #F9F9F9;
+}
+
+#news-area p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+#email-input {
+  border-radius: 0;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 1px solid #65DAF9;
+  display: inline;
+  box-sizing: border-box;
+  width: 40%;
+  height: 40px;
+}
+
+#news-btn {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 1px solid #65DAF9;
+  background-color: #65DAF9;
+  color: #FFF;
+  text-transform: uppercase;
+  height: 40px;
+  padding: 0 30px;
+  margin-left: -130px;
+  position: absolute;
+  transition: .5s;
+}
+
+#news-btn:hover {
+  background-color: #FFF;
+  color: #65DAF9;
+}
+
+/* Orçamento */
+#orcamento-area {
+  background-color: #13bceb;
+  text-transform: uppercase;
+  padding: 4%;
+}
+
+#orcamento-area .container {
+  padding: 40px 100px;
+}
+
+#orcamento-area .row {
+  display: block;
+  text-align: center;
+}
+
+#orcamento-area p {
+  color: #FFF;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 0;
+  height: 60px;
+  line-height: 60px;
+  letter-spacing: 2px;
+  display: inline;
+}
+
+#orcamento-area #call-btn {
+  background-color: #FFF;
+  color: #65DAF9;
+  font-weight: bold;
+  margin-left: 30px;
+  font-size: 20px;
+  width: auto;
+  letter-spacing: 2px;
+}
+
+/* Contato */
+#contact-area {
+  text-align: center;
+}
+
+.contact-box {
+  padding-bottom: 50px; /*Distancia do contact box até a linha divisória*/
+  border-bottom: 1px solid #3EC1D5; /*Linha Divisória*/
+  margin-bottom: 50px; /*Distancia da Linha Divisória até o próximo conteúdo*/
+}
+
+.contact-box i {
+  color: #444; /*Cor dos ícones*/
+  border: solid 1px #444; /*Criar uma borda nos ícones  ícones*/
+  border-radius: 50%; /*Deixa 50% para ficar circular*/
+  width: 55px; /*Largura do circulo*/
+  height: 55px; /*Altura do circulo*/
+  line-height: 55px; /*Centraliza o ícone no circulo*/
+  font-size: 24px; /*Tamnho do ícone*/
+  margin-bottom: 20px; /*Distancia do ícone para o texto*/
+}
+
+.contact-box p {
+  font-size: 16px; /*Tamanho dos textos embaixo dos icones*/
+}
+
+.contact-tile {
+  font-weight: bold; /*Titulos embaixo dos ícones em negrito*/
+  color: #3EC1D5; /*Cor dos titulos embaixo dos ícones em negrito*/
+}
+
+#contact-form input[type="text"], #contact-form textarea {
+  margin-bottom: 15px; /*Distância entre cada uma das caixas de textos*/
+  border-radius: 0;
+}
+#contact-form{
+  margin-top: 15px; /*Distancia entre as caixas de texto do conteúdo acima*/
+}
+
+#contact-form .main-btn {
+  width: 120px; /*Largura do Botão 'Enviar'*/
+  height: 50px; /*Altura do Botão 'Enviar'*/
+}
+
+#contact-form .main-btn:hover {
+  color: #3EC1D5; /*Cor do texto do botão quando o mouse está sobre ele*/
+}
+
+.contact-box:hover > i{
+  transition: .5s;
+  color: #3EC1D5;
+}
+
+/* Última área do site */
+#copy-area {
+  background-color: #F1F1F1; /*Cor da área*/
+}
+
+#copy-area .container {
+  padding: 15px 0; /*Espaçamento em cima e em baixo de 15px e 0 nas laterais*/
+  text-align: center; /*Alinhamento no centro*/
+}
+
+#copy-area .container a {
+  font-weight: bold; /*Logo da Bimom em negrito*/
+  color: #444; /*Cor do Logo*/
+}
+
+#copy-area .container a:hover {
+  text-decoration: none; /*Tira da linha em baixo do link*/
+  color: #3EC1D5; /*Cor do Logo quando o mouse quando*/
+}
+
+/* Tablet */
+@media(max-width: 768px) {
+  
+  /* Geral */
+  .container {
+    padding: 20px 0; /*Diminui os espaços entre as divs*/
+  }
+  
+  /* Slide */
+  #mainSlider .carousel-inner, #mainSlider .carousel-item {
+    height: auto; /*Altura do slide fica automatica*/
+  }
+
+  #mainSlider .carousel-caption h2 {
+    font-size: 28px; /*Diminui o tamanho dos títulos dos slides*/
+  }
+
+  #mainSlider .carousel-caption p {
+    font-size: 18px; /*Diminui o tamanho dos paragrafos dos slides*/
+    margin-bottom: 40px; /*Diminui o espaçamento entre os paragrafos e o botão*/
+  }
+
+  .carousel-caption {
+    left: 10%; /*Aumenta o espaço de conteudo 10% para a esquerda (mais largura)*/
+    right: 10%; /*Aumenta o espaço de conteudo 10% para a direita (mais largura)*/
+  }
+  
+  /* Sobre */
+  #about-area img{
+    margin-top: 200px; 
+  }
+  
+  /* Circulos */
+  .circle-box div {
+    padding: 0 10px; /*0 distancia em cima e em baixo do circulo, 10px tamanho do circulo (quanto menor o valor, maior o circulo)*/
+  }
+
+  #data-area p {
+    font-size: 16px; /*Diminui o Tamanho da fonte em baixo do circulo*/
+  }
+  
+  /* Equipe */
+  .card-title {
+    font-size: 14px; /*Diminui a fonte do nome em baixo da foto*/
+  }
+
+  .card-text {
+    font-size: 12px; /*Diminui a fonte do cargo em baixo do nome*/
+  }
+
+  /* Precisa de Melhorias */
+  #apply-area .apply-box {
+    padding: 50px 15px; /*Coloco 50px de espaço em cima e em baixo e 15px nas laterias do texto, (texto vai mais para os lados)*/
+  }
+
+  /* Receba os emails */
+  #news-area p {
+    width: 80%; /*Deixa o texto em 80% da tela */
+    margin-left: auto; /*Deixa centralizado em margem a esquerda automatica*/
+    margin-right: auto; /*Deixa centralizado em margem a direita automatica*/
+  }
+
+  #email-input {
+    width: 70%; /*Tamanho do lugar para digitar o e-mail*/
+  }
+
+  #orcamento-area {
+    margin-top: 30px; /*Coloca um espaço entre a área do orçamento e o conteúdo acima*/
+  }
+
+  #orcamento .container {
+    padding: 30px;
+  }
+
+  #orcamento-area p, #orcamento-area #call-btn {
+    font-size: 16px; /*Diminui o tamanho da font do orçamento*/
+  }
+
+}
+
+/*Celular*/
+@media(max-width: 425px) {
+
+  /* Slider */
+  #mainSlider {
+    margin-top: 90px; /*O slide todo aparece na tela*/
+  }
+
+  #mainSlider .carousel-caption {
+    top: 5%; /*Deixa o texto a 5 % do topo*/
+  }
+
+  #mainSlider .carousel-caption h2 {
+    font-size: 18px; /*Tamanho do texto dentro do slide*/
+    margin-bottom: 40px; /*Distancia entre o texto e o botão*/
+  }
+
+  #mainSlider .carousel-caption p {
+    display: none; /*Desabilita o paragrafo do slide*/
+  }
+
+  .carousel-caption .main-btn {
+    
+    font-size: 14px; /*Controla o tamanho do botão*/
+  }
+
+  /* Sobre */
+  .main-title {
+    font-size: 30px; /*Diminui a fonte dos títulos*/
+  }
+
+  #about-area img {
+    margin-top: 0; /*Tira o espaço do topo da imagem*/
+    margin-bottom: 30px; /*Coloca espaço em baixo da imagem*/
+  }
+
+  /* Circulo */
+  .circle-box {
+    width: 50%; /*Tamanho do circulo*/
+  }
+
+  /* Equipe */
+  #team-area .col-md-3 {
+    width: 50%; /*Tamanho das imagens*/
+    margin-bottom: 30px; /*Espaço embaixo das imagens*/
+  }
+
+  /* Precisa de Melhorias */
+  #apply-area {
+    height: auto; /*Deixa a altura automática*/
+  }
+
+  #predio-img {
+    display: none; /*Tira a imagem no celular*/
+  }
+
+  /* Portfólio */
+  #portfolio-area .filter-btn {
+    margin-bottom: 20px; /*Espaço em baixo em cada um dos botões*/
+  }
+
+  .project-box {
+    width: 50%; /*Regula o tamanho das imagens*/
+  }
+
+  /* Receba os e-mail */
+  #news-area .main-title {
+    font-size: 24px; /*Diminui o tamanho do título para caber a barrinha em baixo*/
+  }
+
+  #news-area p {
+    font-size: 16px; /*Tamanho do texto*/
+  }
+
+  #email-input {
+    width: 80%; /*Tamanho da área que se escreve o e-mail*/
+  }
+
+  #orcamento-area p, #orcamento-area #call-btn {
+    font-size: 14px; /*Tamanho do texto*/
+    letter-spacing: 0; /*Tira o espaçamento das letras*/
+  }
+
+  #orcamento-area p, #orcamento-area #call-btn {
+    margin: 0; /*Tira os espaços em cima, em baixo e dos lados, referentes ao botão*/
+    width: 40%; /*Largura do botão*/
+  }
+
+  /* Contato */
+  .contact-box {
+    border: none; /*Tira a borda*/
+    margin-bottom: 0; /*Espaço entre os ícones*/
+  }
+
+}
